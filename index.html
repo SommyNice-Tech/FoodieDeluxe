@@ -1,30 +1,324 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Foodie Deluxe — Premium Food Delivery & E-Commerce</title>
-  <meta name="description" content="Order gourmet food online from Foodie Deluxe. Artisan pizza, fresh sushi, gourmet burgers, ramen, and more — delivered in under 30 minutes. Premium food, zero compromise." />
-  <meta name="keywords" content="food delivery, gourmet food, pizza, sushi, burgers, ramen, online food order, food e-commerce" />
-  <meta name="author" content="Foodie Deluxe" />
-  <meta name="theme-color" content="#ff6b35" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Foodie Deluxe — Premium Food Delivery" />
-  <meta property="og:description" content="Gourmet food delivered to your door. Order pizza, sushi, burgers & more." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_US" />
+    <meta
+      name="description"
+      content="Order gourmet food online from Foodie Deluxe. Artisan pizza, fresh sushi, gourmet burgers, ramen, and more — delivered in under 30 minutes. Premium food, zero compromise."
+    />
+    <meta
+      name="keywords"
+      content="food delivery, gourmet food, pizza, sushi, burgers, ramen, online food order, food e-commerce"
+    />
+    <meta name="author" content="Foodie Deluxe" />
+    <meta name="theme-color" content="#ff6b35" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Foodie Deluxe — Premium Food Delivery" />
+    <meta
+      property="og:description"
+      content="Gourmet food delivered to your door. Order pizza, sushi, burgers & more."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
 
-  <!-- Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>"
+    />
 
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- =============================================
+       NAVIGATION
+       ============================================= -->
+
+    <header role="banner">
+      <nav
+        class="navbar"
+        id="navbar"
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <div class="nav-container">
+          <!-- Logo -->
+          <a href="#" class="nav-logo" aria-label="Foodie Deluxe Home">
+            <div class="logo-icon" aria-hidden="true">🍽️</div>
+            <span>Foodie<span>Deluxe</span></span>
+          </a>
+
+          <!-- Desktop Nav Links -->
+          <ul class="nav-links" role="list">
+            <li>
+              <a href="#hero" class="nav-link active" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li><a href="#menu" class="nav-link">Menu</a></li>
+            <li><a href="#deals" class="nav-link">Deals</a></li>
+            <li><a href="#reviews" class="nav-link">Reviews</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+
+          <!-- Search Bar -->
+          <div class="nav-search-wrapper" role="search">
+            <span class="nav-search-icon" aria-hidden="true">🔍</span>
+            <input
+              type="search"
+              id="nav-search"
+              class="nav-search-input"
+              placeholder="Search dishes…"
+              aria-label="Search for food items"
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="nav-actions">
+            <button
+              class="icon-btn"
+              id="wishlist-nav-btn"
+              aria-label="View wishlist"
+              title="Wishlist"
+            >
+              ❤️
+            </button>
+            <button
+              class="icon-btn cart-btn"
+              id="cart-btn"
+              aria-label="Open shopping cart"
+              title="Shopping cart"
+            >
+              🛒
+              <span class="cart-badge" id="cart-badge" aria-live="polite"
+                >0</span
+              >
+            </button>
+          </div>
+
+          <!-- Hamburger -->
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        class="mobile-menu"
+        id="mobile-menu"
+        role="dialog"
+        aria-label="Mobile navigation"
+      >
+        <ul class="mobile-nav-links" role="list">
+          <li>
+            <a href="#hero" class="mobile-nav-link" id="mobile-home">Home</a>
+          </li>
+          <li>
+            <a href="#menu" class="mobile-nav-link" id="mobile-menu-link"
+              >Menu</a
+            >
+          </li>
+          <li>
+            <a href="#deals" class="mobile-nav-link" id="mobile-deals">Deals</a>
+          </li>
+          <li>
+            <a href="#reviews" class="mobile-nav-link" id="mobile-reviews"
+              >Reviews</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="mobile-nav-link" id="mobile-contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="mobile-search" role="search">
+          <span class="mobile-search-icon" aria-hidden="true">🔍</span>
+          <input
+            type="search"
+            id="mobile-search-input"
+            class="mobile-search-input"
+            placeholder="Search dishes…"
+            aria-label="Search for food items on mobile"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- =============================================
+         HERO SECTION
+    ============================================= -->
+      <section class="hero" id="hero" aria-labelledby="hero-heading">
+        <!-- Background -->
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-bg-image"></div>
+          <div class="hero-orb hero-orb-1"></div>
+          <div class="hero-orb hero-orb-2"></div>
+          <div class="hero-orb hero-orb-3"></div>
+        </div>
+
+        <div class="hero-container">
+          <!-- Content -->
+          <div class="hero-content">
+            <div class="hero-badge" aria-label="Currently accepting orders">
+              <span class="pulse" aria-hidden="true"></span>
+              Now accepting orders · Delivers in 30 min
+            </div>
+
+            <h1 class="hero-title" id="hero-heading">
+              Gourmet food<br />
+              <span class="text-gradient line-highlight">delivered fast</span
+              ><br />
+              to your door
+            </h1>
+
+            <p class="hero-desc">
+              Premium restaurant-quality meals crafted by top chefs, delivered
+              while still piping hot. Over 150+ dishes, zero compromise on
+              quality.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                href="#menu"
+                class="btn btn-primary"
+                id="hero-order-btn"
+                aria-label="Browse our full menu"
+              >
+                🍽️ Order Now
+              </a>
+              <button
+                class="btn btn-secondary"
+                id="hero-deals-btn"
+                onclick="
+                  document
+                    .getElementById('deals')
+                    .scrollIntoView({ behavior: 'smooth' })
+                "
+              >
+                🏷️ Today's Deals
+              </button>
+            </div>
+
+            <div
+              class="hero-stats"
+              role="region"
+              aria-label="Service statistics"
+            >
+              <div class="hero-stat">
+                <div class="value text-gradient">50K+</div>
+                <div class="label">Happy Customers</div>
+              </div>
+              <div class="hero-stat">
+                <div class="value text-gradient">150+</div>
+                <div class="label">Menu Items</div>
+              </div>
+              <div class="hero-stat">
+                <div class="value text-gradient">4.9★</div>
+                <div class="label">Average Rating</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Grid -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-food-grid">
+              <div class="hero-food-card tall">
+                <img src="assets/images/pizza.png" alt="Gourmet Pizza" />
+                <span class="card-label">🍕 Pizza</span>
+              </div>
+              <div class="hero-food-card">
+                <img src="assets/images/sushi.png" alt="Fresh Sushi" />
+                <span class="card-label">🍣 Sushi</span>
+              </div>
+              <div class="hero-food-card">
+                <img src="assets/images/burger.png" alt="Smash Burger" />
+                <span class="card-label">🍔 Burgers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+         MARQUEE STRIP
+         ============================================= -->
+      <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-track">
+          <!-- First copy -->
+          <span class="marquee-item"
+            >🍕 Artisan Pizza <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🍣 Fresh Sushi <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🍔 Smash Burgers <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🍜 Ramen Bowls <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🥗 Healthy Bowls <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🍝 Truffle Pasta <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🍰 Premium Desserts <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >⚡ 30-Min Delivery <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🏷️ Daily Deals <span class="sep">•</span></span
+          >
+          <!-- Duplicate copy for seamless loop -->
+          <span class="marquee-item"
+            >🍕 Artisan Pizza <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🍣 Fresh Sushi <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🍔 Smash Burgers <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🍜 Ramen Bowls <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🥗 Healthy Bowls <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🍝 Truffle Pasta <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🍰 Premium Desserts <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >⚡ 30-Min Delivery <span class="sep">•</span></span
+          >
+          <span class="marquee-item"
+            >🏷️ Daily Deals <span class="sep">•</span></span
+          >
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
