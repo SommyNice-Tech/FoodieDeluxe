@@ -1,0 +1,80 @@
+/* ---------- Google Fonts Import ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  /* Color Palette */
+  --clr-bg-primary: #08090d;
+  --clr-bg-secondary: #0f1117;
+  --clr-bg-card: #141720;
+  --clr-bg-card-hover: #1a1e2e;
+  --clr-bg-glass: rgba(20, 23, 32, 0.75);
+
+  --clr-accent-primary: #ff6b35;
+  --clr-accent-secondary: #ff9d6c;
+  --clr-accent-glow: rgba(255, 107, 53, 0.25);
+  --clr-accent-gold: #f5c842;
+  --clr-accent-green: #4ade80;
+
+  --clr-text-primary: #f0f2f8;
+  --clr-text-secondary: #8b90a7;
+  --clr-text-muted: #555a72;
+
+  --clr-border: rgba(255, 255, 255, 0.07);
+  --clr-border-accent: rgba(255, 107, 53, 0.3);
+
+  --gradient-brand: linear-gradient(135deg, #ff6b35 0%, #ff9d6c 50%, #f5c842 100%);
+  --gradient-hero: linear-gradient(135deg, #08090d 0%, #0f1117 50%, #141720 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255,107,53,0.05) 0%, rgba(20,23,32,0) 60%);
+
+  /* Typography */
+  --font-primary: 'Outfit', sans-serif;
+  --font-display: 'Playfair Display', serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.5);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.6);
+  --shadow-glow: 0 0 30px rgba(255,107,53,0.2);
+  --shadow-glow-strong: 0 0 60px rgba(255,107,53,0.35);
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-mid: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-Index */
+  --z-nav: 100;
+  --z-cart: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+
+  /* Layout */
+  --max-width: 1400px;
+  --nav-height: 72px;
+}
+
+/* ---------- CSS Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
