@@ -319,6 +319,197 @@
           >
         </div>
       </div>
+      
+    <!-- =============================================
+         FEATURES SECTION
+         ============================================= -->
+    <section class="features section-padding" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="section-tag">✨ Why Choose Us</div>
+          <h2 class="section-title" id="features-heading">The <span class="text-gradient">Foodie Deluxe</span> difference</h2>
+          <p class="section-subtitle">We obsess over every detail so you can enjoy a perfect meal every time.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card animate-on-scroll stagger-1">
+            <div class="feature-icon orange" aria-hidden="true">⚡</div>
+            <h3 class="feature-title">Lightning Fast Delivery</h3>
+            <p class="feature-desc">Our network of express riders guarantees delivery under 30 minutes — or your next order is free. Real-time tracking included.</p>
+          </div>
+          <div class="feature-card animate-on-scroll stagger-2">
+            <div class="feature-icon gold" aria-hidden="true">👨‍🍳</div>
+            <h3 class="feature-title">Chef-Crafted Recipes</h3>
+            <p class="feature-desc">Every dish is created by Michelin-trained chefs using premium, locally-sourced ingredients. No shortcuts. Ever.</p>
+          </div>
+          <div class="feature-card animate-on-scroll stagger-3">
+            <div class="feature-icon green" aria-hidden="true">🌿</div>
+            <h3 class="feature-title">Fresh & Sustainable</h3>
+            <p class="feature-desc">100% fresh produce delivered from local farms daily. Our eco-friendly packaging is fully biodegradable and carbon-neutral.</p>
+          </div>
+          <div class="feature-card animate-on-scroll stagger-4">
+            <div class="feature-icon purple" aria-hidden="true">💳</div>
+            <h3 class="feature-title">Secure & Easy Payment</h3>
+            <p class="feature-desc">Bank-grade encryption on every transaction. Pay with card, PayPal, Apple Pay, or split the bill with your friends.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+       <!-- =============================================
+         CATEGORIES + MENU SECTION
+         ============================================= -->
+    <section class="categories section-padding" id="categories" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="section-tag">🍽️ Categories</div>
+          <h2 class="section-title" id="categories-heading">Browse by <span class="text-gradient">cuisine</span></h2>
+          <p class="section-subtitle">From spicy street food to elegant fine-dining — curated across 7 categories.</p>
+        </div>
+        <div class="categories-grid" id="categories-grid" role="group" aria-label="Food categories filter"></div>
+      </div>
+    </section>
+
+      <!-- =============================================
+         PRODUCTS / MENU
+         ============================================= -->
+    <section class="products" id="menu" aria-labelledby="menu-heading">
+      <div class="container">
+        <div class="products-top">
+          <div>
+            <h2 class="section-title" id="menu-heading">Our <span class="text-gradient">Menu</span></h2>
+            <p style="color: var(--clr-text-muted); font-size:0.9rem;" id="products-count">12 items</p>
+          </div>
+          <div class="products-controls">
+            <select id="sort-select" class="sort-select" aria-label="Sort products">
+              <option value="default">Default</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+              <option value="popular">Most Popular</option>
+            </select>
+            <div class="view-toggle" role="group" aria-label="View mode">
+              <button class="view-btn active" data-view="grid" id="grid-view-btn" aria-label="Grid view" title="Grid view">⊞</button>
+              <button class="view-btn" data-view="list" id="list-view-btn" aria-label="List view" title="List view">☰</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-grid" id="products-grid" role="list" aria-label="Food items"></div>
+      </div>
+    </section>
+
+        <!-- =============================================
+         DEALS / PROMOTIONS SECTION
+         ============================================= -->
+    <section class="deals section-padding" id="deals" aria-labelledby="deals-heading">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="section-tag">🏷️ Special Offers</div>
+          <h2 class="section-title" id="deals-heading">Today's <span class="text-gradient">Hot Deals</span></h2>
+          <p class="section-subtitle">Limited-time offers curated just for you. Use code <strong>FOODIE15</strong> for 15% off.</p>
+        </div>
+        <div class="deals-grid">
+
+          <!-- Main Deal -->
+          <article class="deal-card" id="deal-card-1" aria-label="Pizza deal — 30% off">
+            <div class="deal-bg" aria-hidden="true"></div>
+            <div class="deal-overlay" aria-hidden="true"></div>
+            <div class="deal-content">
+              <span class="deal-tag">🔥 Flash Sale</span>
+              <h3 class="deal-title">30% Off All<br>Premium Pizzas</h3>
+              <p class="deal-desc">Hand-stretched, wood-fired perfection — at a price that's even hotter.</p>
+              <div class="deal-countdown" aria-label="Time remaining for deal" role="timer">
+                <div class="countdown-unit">
+                  <span class="num" id="countdown-hours">05</span>
+                  <span class="lbl">hrs</span>
+                </div>
+                <div class="countdown-unit">
+                  <span class="num" id="countdown-mins">32</span>
+                  <span class="lbl">min</span>
+                </div>
+                <div class="countdown-unit">
+                  <span class="num" id="countdown-secs">14</span>
+                  <span class="lbl">sec</span>
+                </div>
+              </div>
+              <button class="btn btn-primary" id="deal-pizza-btn" onclick="(function(){document.querySelector('[data-category=\'pizza\']')?.click(); document.getElementById('menu').scrollIntoView({behavior:'smooth'});})()">
+                🍕 Grab This Deal
+              </button>
+            </div>
+          </article>
+
+          <!-- Secondary Deal -->
+          <article class="deal-card" id="deal-card-2" aria-label="Burger deal — free fries">
+            <div class="deal-bg" aria-hidden="true"></div>
+            <div class="deal-overlay" aria-hidden="true"></div>
+            <div class="deal-content">
+              <span class="deal-tag">🍟 Bundle Offer</span>
+              <h3 class="deal-title">Free Fries with Every Burger</h3>
+              <p class="deal-desc">Order any burger and get a side of crispy fries on us. No code needed.</p>
+              <button class="btn btn-secondary" id="deal-burger-btn" onclick="(function(){document.querySelector('[data-category=\'burgers\']')?.click(); document.getElementById('menu').scrollIntoView({behavior:'smooth'});})()">
+                🍔 Order Burgers
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- =============================================
+         TESTIMONIALS
+         ============================================= -->
+    <section class="testimonials section-padding" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="section-tag">💬 Customer Love</div>
+          <h2 class="section-title" id="reviews-heading">What our <span class="text-gradient">foodies</span> say</h2>
+          <p class="section-subtitle">Thousands of delighted customers — read their unfiltered experiences.</p>
+        </div>
+
+        <div class="testimonials-slider" role="region" aria-label="Customer testimonials" aria-roledescription="carousel">
+          <div class="testimonials-track" id="testimonials-track"></div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" id="slider-prev" aria-label="Previous testimonials">←</button>
+          <div class="slider-dots" id="slider-dots" role="tablist" aria-label="Testimonial slides"></div>
+          <button class="slider-btn" id="slider-next" aria-label="Next testimonials">→</button>
+        </div>
+      </div>
+    </section>
+
+        <!-- =============================================
+         NEWSLETTER
+         ============================================= -->
+    <section class="newsletter section-padding" id="contact" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter-box animate-on-scroll">
+          <div class="newsletter-emoji" aria-hidden="true">📧</div>
+          <h2 class="newsletter-title" id="newsletter-heading">
+            Get <span class="text-gradient">20% off</span> your first order
+          </h2>
+          <p class="newsletter-subtitle">
+            Join 50,000+ food lovers getting weekly deals, new menu launches, and chef's secret recipes.
+          </p>
+          <form class="newsletter-form" id="newsletter-form" novalidate>
+            <input
+              type="email"
+              id="newsletter-input"
+              class="newsletter-input"
+              placeholder="Enter your email address…"
+              aria-label="Email address for newsletter subscription"
+              autocomplete="email"
+              required
+            />
+            <button type="submit" class="btn btn-primary" id="newsletter-submit-btn">
+              🎁 Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
     </main>
   </body>
 </html>
