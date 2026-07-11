@@ -511,5 +511,257 @@
       </div>
     </section>
     </main>
+
+      <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#" class="footer-logo" aria-label="Foodie Deluxe Home">
+            <div class="logo-icon" aria-hidden="true">🍽️</div>
+            <span>Foodie<span style="color: var(--clr-accent-primary)">Deluxe</span></span>
+          </a>
+          <p class="footer-desc">
+            Premium food delivery powered by a passion for exceptional cuisine. From your favourite local chefs to your doorstep — in minutes, not hours.
+          </p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" class="social-btn" aria-label="Follow us on Instagram" title="Instagram">📸</a>
+            <a href="#" class="social-btn" aria-label="Follow us on Twitter/X" title="Twitter">🐦</a>
+            <a href="#" class="social-btn" aria-label="Follow us on Facebook" title="Facebook">👥</a>
+            <a href="#" class="social-btn" aria-label="Watch us on YouTube" title="YouTube">▶️</a>
+            <a href="#" class="social-btn" aria-label="Follow us on TikTok" title="TikTok">🎵</a>
+          </div>
+        </div>
+
+        <!-- Menu -->
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#menu" class="footer-link" id="footer-pizza-link" onclick="document.querySelector('[data-category=pizza]')?.click()">🍕 Pizza</a></li>
+            <li><a href="#menu" class="footer-link" id="footer-sushi-link" onclick="document.querySelector('[data-category=sushi]')?.click()">🍣 Sushi</a></li>
+            <li><a href="#menu" class="footer-link" id="footer-burgers-link" onclick="document.querySelector('[data-category=burgers]')?.click()">🍔 Burgers</a></li>
+            <li><a href="#menu" class="footer-link" id="footer-noodles-link" onclick="document.querySelector('[data-category=noodles]')?.click()">🍜 Noodles</a></li>
+            <li><a href="#menu" class="footer-link" id="footer-healthy-link" onclick="document.querySelector('[data-category=healthy]')?.click()">🥗 Healthy</a></li>
+            <li><a href="#menu" class="footer-link" id="footer-desserts-link" onclick="document.querySelector('[data-category=desserts]')?.click()">🍰 Desserts</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#" class="footer-link" id="footer-about">ℹ️ About Us</a></li>
+            <li><a href="#" class="footer-link" id="footer-careers">💼 Careers</a></li>
+            <li><a href="#" class="footer-link" id="footer-blog">📰 Blog</a></li>
+            <li><a href="#" class="footer-link" id="footer-press">📢 Press</a></li>
+            <li><a href="#" class="footer-link" id="footer-partners">🤝 Partners</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#" class="footer-link" id="footer-faq">❓ FAQ</a></li>
+            <li><a href="#" class="footer-link" id="footer-track">📍 Track Order</a></li>
+            <li><a href="#" class="footer-link" id="footer-returns">🔄 Returns</a></li>
+            <li><a href="#" class="footer-link" id="footer-contact-support">📞 Contact Us</a></li>
+            <li><a href="#" class="footer-link" id="footer-privacy">🔒 Privacy Policy</a></li>
+            <li><a href="#" class="footer-link" id="footer-terms">📄 Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2026 Foodie Deluxe. All rights reserved. Made with ❤️ and 🍕.
+        </p>
+        <div class="footer-payments" aria-label="Accepted payment methods">
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MC</span>
+          <span class="payment-badge">AMEX</span>
+          <span class="payment-badge">PayPal</span>
+          <span class="payment-badge">Apple Pay</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+ 
+  <!-- ==============================================
+       WISHLIST SIDEBAR
+       ============================================= -->
+  <div class="wishlist-overlay" id="wishlist-overlay" role="presentation"></div>
+
+  <aside class="wishlist-sidebar" id="wishlist-sidebar" role="dialog" aria-label="Favourites wishlist" aria-modal="true">
+    <div class="wishlist-header">
+      <div class="wishlist-header-left">
+        <span>❤️</span>
+        <h2 class="wishlist-title">My Favourites</h2>
+        <span class="wishlist-count-badge" id="wishlist-count-badge" aria-live="polite">0</span>
+      </div>
+      <button class="close-wishlist-btn" id="close-wishlist-btn" aria-label="Close wishlist">✕</button>
+    </div>
+
+    <!-- Empty State -->
+    <div class="wishlist-empty" id="wishlist-empty" role="status">
+      <div class="wishlist-empty-emoji" aria-hidden="true">🤍</div>
+      <h3 class="wishlist-empty-title">No favourites yet</h3>
+      <p class="wishlist-empty-desc">Tap the ❤️ on any dish to save it here!</p>
+      <button class="btn btn-primary" id="wishlist-browse-btn" onclick="closeWishlist(); document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+        Browse Menu
+      </button>
+    </div>
+
+    <!-- Wishlist Items -->
+    <div class="wishlist-items" id="wishlist-items-container" aria-live="polite" aria-label="Favourite items"></div>
+
+    <!-- Wishlist Footer -->
+    <div class="wishlist-footer" id="wishlist-footer" style="display:none;">
+      <button class="wishlist-add-all-btn" id="wishlist-add-all-btn" aria-label="Add all favourites to cart">
+        🛒 Add All to Cart
+      </button>
+    </div>
+  </aside>
+
+    <!-- ==============================================
+       CART SIDEBAR
+       ============================================= -->
+  <div class="cart-overlay" id="cart-overlay" role="presentation"></div>
+
+  <aside class="cart-sidebar" id="cart-sidebar" role="dialog" aria-label="Shopping cart" aria-modal="true">
+    <div class="cart-header">
+      <div class="cart-header-left">
+        <span>🛒</span>
+        <h2 class="cart-title">Your Cart</h2>
+        <span class="cart-count-badge" id="cart-count-badge" aria-live="polite">0</span>
+      </div>
+      <button class="close-cart-btn" id="close-cart-btn" aria-label="Close cart">✕</button>
+    </div>
+
+    <!-- Empty State -->
+    <div class="cart-empty" id="cart-empty" role="status">
+      <div class="cart-empty-emoji" aria-hidden="true">🛒</div>
+      <h3 class="cart-empty-title">Your cart is empty</h3>
+      <p class="cart-empty-desc">Add something delicious to get started!</p>
+      <button class="btn btn-primary" id="cart-browse-btn" onclick="closeCart(); document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+        Browse Menu
+      </button>
+    </div>
+
+    <!-- Cart Items -->
+    <div class="cart-items" id="cart-items-container" aria-live="polite" aria-label="Cart items"></div>
+
+    <!-- Cart Footer -->
+    <div class="cart-footer" id="cart-footer" style="display:none;">
+      <!-- Promo Code -->
+      <div class="cart-promo">
+        <input type="text" id="promo-input" class="promo-input" placeholder="Promo code (try FOODIE15)" aria-label="Enter promo code" />
+        <button class="promo-apply-btn" id="promo-apply-btn">Apply</button>
+      </div>
+
+      <!-- Summary -->
+      <div class="cart-summary" aria-label="Order summary">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Delivery fee</span>
+          <span id="cart-delivery">$4.99</span>
+        </div>
+        <div class="summary-line" id="cart-discount-row" style="display:none; color: var(--clr-accent-green);">
+          <span>🏷️ Promo (FOODIE15)</span>
+          <span id="cart-discount-val">-$0.00</span>
+        </div>
+        <div class="summary-line total">
+          <span>Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+      </div>
+
+      <button class="checkout-btn" id="checkout-btn" aria-label="Proceed to checkout">
+        ✅ Checkout
+      </button>
+    </div>
+  </aside>
+
+    <!-- =============================================
+       PRODUCT MODAL
+       ============================================= -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Product details">
+    <div class="modal" id="product-modal">
+
+      <!-- Image Side -->
+      <div class="modal-image-section">
+        <img class="modal-image" id="modal-image" src="" alt="" loading="lazy" />
+        <div class="modal-emoji-placeholder" id="modal-emoji" style="display:none;"></div>
+        <button class="close-modal-btn" id="close-modal-btn" aria-label="Close product details">✕</button>
+      </div>
+
+      <!-- Info Side -->
+      <div class="modal-content">
+        <span class="modal-category" id="modal-category"></span>
+        <h2 class="modal-name" id="modal-name"></h2>
+        <div class="modal-rating">
+          <div class="stars" id="modal-stars" aria-hidden="true"></div>
+          <span class="rating-text" id="modal-rating-text"></span>
+        </div>
+        <p class="modal-desc" id="modal-desc"></p>
+
+        <div class="modal-info-grid">
+          <div class="info-chip">
+            <div class="chip-label">Prep Time</div>
+            <div class="chip-val" id="modal-prep"></div>
+          </div>
+          <div class="info-chip">
+            <div class="chip-label">Calories</div>
+            <div class="chip-val" id="modal-cal"></div>
+          </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="modal-qty-selector">
+          <span class="modal-qty-label">Quantity:</span>
+          <div class="modal-qty-controls">
+            <button class="modal-qty-btn" id="modal-qty-minus" aria-label="Decrease quantity">−</button>
+            <span class="modal-qty-display" id="modal-qty-display" aria-live="polite">1</span>
+            <button class="modal-qty-btn" id="modal-qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer">
+          <div class="modal-price">
+            <div class="label">Total</div>
+            <div class="amount text-gradient" id="modal-price-amount">$0.00</div>
+            <div id="modal-original-price" style="font-size:0.75rem; color: var(--clr-text-muted); text-decoration:line-through; display:none;"></div>
+          </div>
+          <button class="modal-add-btn" id="modal-add-btn">
+            🛒 Add to Cart
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+   <!-- =============================================
+       TOAST CONTAINER
+       ============================================= -->
+  <div class="toast-container" id="toast-container" role="alert" aria-live="polite" aria-label="Notifications"></div>
+
+
+    <!-- =============================================
+       BACK TO TOP
+       ============================================= -->
+  <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top" title="Back to top">↑</button>
+
   </body>
 </html>
